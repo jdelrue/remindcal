@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tailwind.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.svg" sizes="any">
+    <title>Jimber Meeting Reminder</title>
+
+</head>
+
+<body>
+
+    <main class="w-full">
+        <div class="nav_component">
+            <a href="/" aria-label="homepage" aria-current="page" class="w-nav-brand w--current">
+                <img src="images/logo.svg" loading="lazy" alt="" class="logo">
+            </a>
+        </div>
+
+
+        <!--</div>-->
+
+        <h1 class="text-center w-full  p-4"> <span>Jimber Meeting Reminder</span> </h1>
+        <div class="w-full max-w-xl mx-auto ">
+            <br>
+            <span id="meetingdetails"></span>
+        </div>
+
+
+
+        <script>
+
+
+            const searchParams = new URLSearchParams(window.location.search);
+
+            var details = document.getElementById("meetingdetails");
+            details.innerHTML = "Upcoming meeting: <br> " + searchParams.get('meeting');
+        </script>
+    </main>
+    <p class="footer text-gray-500 text-xs mt-20">
+        &copy; 2023 Jimber Network Isolation.
+    </p>
+</body>
+
+</html>
