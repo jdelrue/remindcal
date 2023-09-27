@@ -30,15 +30,14 @@
             <span id="meetingdetails"></span>
         </div>
 
-
-
         <script>
-
 
             const searchParams = new URLSearchParams(window.location.search);
 
             var details = document.getElementById("meetingdetails");
             details.innerHTML = "Upcoming meeting: <br> " + searchParams.get('meeting');
+
+       
         </script>
     </main>
     <p class="footer text-gray-500 text-xs mt-20">
